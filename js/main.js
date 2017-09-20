@@ -18,37 +18,47 @@ const imageGallery = document.querySelector('#rImageGallery')
 const theGauntlet = document.querySelector('#gauntlet')
 const theProjectDetails = document.querySelector('#projectDetails')
 const gauntletLink = document.querySelector('#linkToTheGauntlet')
+const galleryLink = document.querySelector('#linkToImageGallery')
+let newGallery = projects.imageGallery
+let newGauntlet = projects.gauntlet
+const createGallery = CreateTheString(newGallery.img, newGallery.alt, newGallery.title, newGallery.description, newGallery.websiteLink)
+const createGauntlet = CreateTheString(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
 
 if (gauntletLink) {
-
   gauntletLink.addEventListener('click', () => {
-      console.log('boop')
-    let newGauntlet = projects.imageGallery
-    asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
+    localStorage.setItem('preLoad', createGauntlet)
+  })
+}
+if (galleryLink) {
+  galleryLink.addEventListener('click', () => {
+    localStorage.setItem('preLoad', createGallery)
   })
 }
 
 if (theProjectDetails) {
-  let newGauntlet = projects.gauntlet
-  asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
+  if(localStorage.getItem('preLoad')) {
+    theProjectDetails.innerHTML = localStorage.getItem('preLoad')
+  } else {
+    theProjectDetails.innerHTML = '<p>Select a project to view</p>'
+  }
+
 }
 if (imageGallery) {
   imageGallery.addEventListener('click', () => {
-    let newGallery = projects.imageGallery
-    asshole(newGallery.img, newGallery.alt, newGallery.title, newGallery.description, newGallery.websiteLink)
+    theProjectDetails.innerHTML = createGallery
   })
 }
 if (theGauntlet) {
   theGauntlet.addEventListener('click', () => {
-    let newGauntlet = projects.gauntlet
-    asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
+    theProjectDetails.innerHTML = createGauntlet
   })
 }
 
-function asshole(image, theAlt, theTitle, theDescription, theLink) {
+function CreateTheString(image, theAlt, theTitle, theDescription, theLink) {
   let htmlString = `<img class="img-fluid" src="${image}" alt="${theAlt}" />
                     <h2>${theTitle}</h2>
                     <p>${theDescription}</p>
                     <p><a class="btn btn-primary" href="${theLink}">View the Live Website</a></p>`
-  theProjectDetails.innerHTML = htmlString
+  return htmlString
+  // theProjectDetails.innerHTML = htmlString
 }
