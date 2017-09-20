@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js" defer></script>
   <title>Home</title>
 </head>
-<body style="background-color: #FFF2F8;">
+<body>
   <!-- HEADER -->
   <header>
     <nav class="navbar navbar-light">
       <a href="index.html"><img src="images/logo.svg" alt="" class="m-2 img-fluid" style="width: 100px;"></a>
       <!-- NAVIGATION -->
       <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
         </li>
@@ -25,14 +31,14 @@
         </li>
       </ul>
     </nav>
-    <h1 class="text-center text-uppercase display-2 p-5">Hello.</h1>
+    <h1 class="text-center text-uppercase display-2 py-5 my-5">Hello.</h1>
   </header>
   <!-- ABOUT AND WHAT I CAN DO -->
   <div class="container">
     <div class="row">
       <!-- ABOUT SECTION -->
       <section class="col-md-6">
-        <div class="p-3 border border-primary rounded" style="background-color: #FFB7D8;">
+        <div class="p-3 border border-primary rounded section-color">
           <h2>About</h2>
           <div class="container">
             <div class="row">
@@ -44,21 +50,21 @@
       </section>
       <!-- WHAT I CAN DO SECTION -->
       <section class="p-3 col-md-6">
-        <div class="p-3 border border-primary rounded" style="background-color: #FFB7D8;">
+        <div class="p-3 border border-primary rounded section-color">
           <h2>What I Can Do</h2>
-          <ul>
-            <li>HTML/CSS</li>
-            <li>C#</li>
-            <li>JavaScript</li>
+          <ul class="d-flex flex-row ">
+            <li><img class="skills" src="./images/html.svg" alt=""></li>
+            <li><img class="skills" src="./images/css.svg" alt=""></li>
+            <li><img class="skills" src="./images/javascript.svg" alt=""></li>
           </ul>
-          <p><a href="#" class="btn btn-primary">View More</a></p>
+          <p><a href="#!" class="btn btn-primary">View More</a></p>
         </div>
       </section>
     </div>
   </div>
   <!-- A FEW PROJECTS -->
 <div class="container mt-3">
-  <section class="p-3 border border-primary rounded" style="background-color: #FFB7D8">
+  <section class="p-3 border border-primary rounded section-color">
     <h2>A Few Projects</h2>
     <div class="container">
       <div class="row">
@@ -74,15 +80,15 @@
           <img src="./images/gauntlet-small_1.png" alt="" class="img-fluid">
           <h3>The Gauntlet</h3>
           <p>One of my first projects when it comes to web development</p>
-          <p><a href="#" class="btn btn-primary">View more about the project</a></p>
+          <p><a id="linkToTheGauntlet" href="projects.html" class="btn btn-primary">View more about the project</a></p>
         </div>
       </div>
     </div>
 </div>
   </section>
   <!-- FOOTER -->
-  <footer class="mt-4 navbar sticky-bottom bg-primary">
-    <p class="text-center">Kloe Rogers</p>
+  <footer class="mt-4 navbar sticky-bottom bg-primary justify-content-center">
+      <p><i class="fa fa-copyright" aria-hidden="true"></i> Kloe Rogers</p>
   </footer>
 </body>
 </html>

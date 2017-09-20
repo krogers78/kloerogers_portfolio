@@ -1,0 +1,13 @@
+body { background-color: #FFF2F8; }
+.section-color { background-color: #FFB7D8; }
+.action-color { background-color: #4BD8BC; }
+.border-primary {  border-color:#7F6A74 !important }
+.col-md-4, .col-md-8 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.bg-primary { background-color:  transparent !important; }
+.skills { width: 75%; }
+ul {
+  list-style-type: none;
+}

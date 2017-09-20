@@ -1,10 +1,10 @@
-const no = {
+const projects = {
   imageGallery: {
     img: './images/rollercoaster-small.png',
     alt: 'A screenshot depicting the the web page with images of rollercoasters.',
     title: 'Responsive Image Gallery',
     description: 'This project is a small image gallery utlizing the Unsplash API and CSS animations. The images were brought in from Unsplash and have a hover effect that displays metadata with an animation. Along with this, the use of a basic animation was used on the logo to spin when clicked.',
-    websiteLink: 'http://krogers78.github.io/responsiveImageGallery'
+    websiteLink: 'http://krogers78.github.io/responsiveImagePage'
   },
   gauntlet: {
     img: './images/gauntlet-small_1.png',
@@ -17,23 +17,31 @@ const no = {
 const imageGallery = document.querySelector('#rImageGallery')
 const theGauntlet = document.querySelector('#gauntlet')
 const theProjectDetails = document.querySelector('#projectDetails')
+const gauntletLink = document.querySelector('#linkToTheGauntlet')
+
+if (gauntletLink) {
+
+  gauntletLink.addEventListener('click', () => {
+      console.log('boop')
+    let newGauntlet = projects.imageGallery
+    asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
+  })
+}
 
 if (theProjectDetails) {
-  console.log('whore')
-  let bitch = no.gauntlet
-  asshole(bitch.img, bitch.alt, bitch.title, bitch.description, bitch.websiteLink)
+  let newGauntlet = projects.gauntlet
+  asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
 }
 if (imageGallery) {
   imageGallery.addEventListener('click', () => {
-    let bitch = no.imageGallery
-    asshole(bitch.img, bitch.alt, bitch.title, bitch.description, bitch.websiteLink)
+    let newGallery = projects.imageGallery
+    asshole(newGallery.img, newGallery.alt, newGallery.title, newGallery.description, newGallery.websiteLink)
   })
 }
 if (theGauntlet) {
-  console.log('cunt')
   theGauntlet.addEventListener('click', () => {
-    let bitch = no.gauntlet
-    asshole(bitch.img, bitch.alt, bitch.title, bitch.description, bitch.websiteLink)
+    let newGauntlet = projects.gauntlet
+    asshole(newGauntlet.img, newGauntlet.alt, newGauntlet.title, newGauntlet.description, newGauntlet.websiteLink)
   })
 }
 
