@@ -1,7 +1,8 @@
 body { background-color: #FFF2F8; }
 .section-color { background-color: #FFB7D8; }
-.action-color { background-color: #4BD8BC; }
+.action-color, .btn-primary { background-color: #4BD8BC; }
 .border-primary {  border-color:#7F6A74 !important }
+.btn-primary { color: #111111; border: none; }
 .col-md-4, .col-md-8 {
   padding-left: 5px;
   padding-right: 5px;
@@ -10,4 +11,23 @@ body { background-color: #FFF2F8; }
 .skills { width: 75%; }
 ul {
   list-style-type: none;
+}
+.circle {
+  margin: 0.5rem;
+  width: 130px;
+  height: 130px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #38234E;
+  border: 6px solid #DDDEEE;
+}
+.circle-text {
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: #FFFEEE;
+  font-size: 16px;
+}
+a {
+  color: #38234E;
 }
